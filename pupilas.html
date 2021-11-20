@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="aa.png">
+    <title>Capstone Monitoreo Remoto</title>
+
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel='stylesheet' type='text/css' media='screen' href='webcam-demo.css'>
+
+
+    
+
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                            
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="aaaaaa.html">
+                            <b class="logo-icon">
+                                <!-- Dark Logo icon -->
+                                <img src="iconlogo.png" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo icon -->
+                                <img src="iconlogo.png" alt="homepage" class="light-logo" />
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            <span class="logo-text">
+                                <!-- dark Logo text -->
+                                <img src="logo3.PNG" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo text -->
+                                <img src="logo3.PNG" class="light-logo" alt="homepage" />
+                            </span>
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+
+
+
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+
+                        <!-- ============================================================== -->
+                        <!-- settings -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="settings" class="svg-icon"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ajustes</a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="bell" class="svg-icon"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ajustes</a>
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                    <ul class="navbar-nav float-right">
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="aa.png" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ml-2 d-none d-lg-inline-block"><span>Hola,</span> <span
+                                        class="text-dark">Doctor!</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="pacientes.html"
+                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                class="hide-menu">Tablero</span></a></li>
+                        <li class="list-divider"></li>
+                        
+                        <li class="nav-small-cap"><span class="hide-menu">Información</span></li>
+ 
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
+                                    class="hide-menu">Monitoreo </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="aaaaaa.html" class="sidebar-link"><span
+                                            class="hide-menu"> Signos Vitales
+                                        </span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-small-cap"><span class="hide-menu">Examenes</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                            aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                class="hide-menu">Ver </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <li class="sidebar-item"><a href="ticket-list.html" class="sidebar-link"><span
+                                        class="hide-menu"> Electrocardiograma
+                                    </span></a>
+                            </li>
+                            <li class="sidebar-item"><a href="pupilas.html" class="sidebar-link"><span
+                                        class="hide-menu"> Exámen de Pupilas
+                                    </span></a>
+                            </li>
+         
+                        </ul>
+
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Reportes</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                            aria-expanded="false"><i data-feather="inbox" class="feather-icon"></i><span
+                                class="hide-menu">Mensajería </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <li class="sidebar-item"><a href="actividades.html" class="sidebar-link"><span
+                                class="hide-menu"> Actividades
+                            </span></a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="reportes.html" class="sidebar-link"><span
+                                class="hide-menu"> Anomalías
+                            </span></a>
+                            </li>
+
+         
+        
+                        </ul>
+
+                        
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Recordatorios</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html"
+                            aria-expanded="false"><i data-feather="calendar" class="feather-icon"></i><span
+                                class="hide-menu">Calendario</span></a></li>
+
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Autentificacion</span></li>
+
+                       
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
+                                href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
+                                    class="feather-icon"></i><span class="hide-menu">Registrarse
+                                </span></a>
+                        </li>
+
+                        <li class="list-divider"></li>
+
+
+                        <li class="nav-small-cap"><span class="hide-menu">Extras</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Cerrar Sesión</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+
+                <div class="row">
+                    <div class="col-7 align-self-center">
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Exámenes del Paciente</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="" class="text-muted">Exámen</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Reflejo de Pupilas</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-5 align-self-center">
+                        <div class="customize-input float-right">
+                            <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+                                <option selected>Hoy</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-1"></div>
+
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Exámen Reflejo de Pupilas</h4>
+                                <div class="media">
+                                    <div class="media-body">
+
+                                        <p class="font-weight-bold">Instrucciones:</p>
+                                        <li>Presione el botón "Solicitar" de la parte inferior cuando desee dar aviso al paciente para
+                                            comenzar con las mediciones para el exámen 
+                                            reflejo de pupilas.   
+                                        </li>
+                                        <li>
+                                         Presione "Terminar" cuando desee dar por terminado el exámen.
+                                        </li>
+
+                                        <p></p>
+                                        <p></p>
+                                        
+                                        <div>
+        
+                                            <row>
+                                                <button class="btn btn-success waves-effect waves-light" type="button" id ="solicitar_exp"><span
+                                                    class="btn-label"><i class="fa fa-bell"></i></span>
+                                                Solicitar</button>
+                                                
+                                                </button>
+
+                                                <button class="btn btn-dark waves-effect waves-light" type="button" id ="terminar_exp"><span
+                                                    class="btn-label"><i class="fa fa-heartbeat"></i></span>
+                                                Terminar</button>
+
+                                            </row>
+                                            <div>
+                                                
+
+                                            </div>
+                                            
+                                            <p>
+
+                                            </p>
+                                            <div>
+                                                
+
+                                            </div>
+                                            
+        
+                                        </div>
+        
+                                        <p></p>
+                                        <p></p>
+                                        <p>
+                                            <code id = "texto_2"></code>
+                                        </p>
+                       
+                                       
+                                    </div>
+                                    
+                                    <img class="ml-4 w-25" src="ecg3.png"
+                                        alt="Generic placeholder image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <div class="media">
+                                    <div class="media-body">
+
+                                        <p class="font-weight-bold">Información:</p>
+                                        <li>
+                                            Medición:
+                                        </li>
+                                        <p class= "text-muted">
+                                            Cámara OV7670.
+                                        </p>
+                                    
+                                        <li>Fotogramas por segundo: </li>
+                                        <p class= "text-muted">
+                                            30 fps.
+                                        </p>
+
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                      
+                                        <br> <br>
+                                        <br> <br>
+                                        
+                                    </div>
+
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-1"></div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <div class="media">
+                                    <div class="media-body">
+
+                                        <p class="font-weight-bold">Streaming:</p>
+
+                                        <p class="card-text">Presione el botón de la parte inferior para comenzar a ver la transmisión
+                                            del paciente.</p>
+                                        
+                                        <p></p>
+                                        
+
+                                        <p></p>
+                                        <a href="http://4.tcp.ngrok.io:19528/" class="btn btn-dark"><span
+                                            class="btn-label"><i class="fas fa-link"></i></span> </a>
+                                        
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <br> <br>
+                                        <br> <br>
+                                    </div>
+
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <div class="media">
+                                    <div class="media-body">
+
+                                        <p class="font-weight-bold">Actuador: </p>
+
+                                        <p >Control de Luz</p>
+
+                                        <li class="text-muted">Presione uno de los botones de la parte inferior para encender o apagar 
+                                            el led de luz que recibe el paciente durante el exámen. </li>
+                                            <p></p>
+                                            <li class="text-muted">Lo anterior, tiene como objetivo observar en mayor medida la contracción pupilar.</li>
+
+                                        <p></p>
+                                        <p></p>
+                                        
+                                        <div>
+                                            <row>
+                                               
+                                                <button class="btn btn-dark waves-effect waves-light" type="button" id ="encender"><span
+                                                    class="btn-label"><i class="fas fa-lightbulb"></i></span>
+                                                Encender</button>
+
+                                                <button class="btn btn-dark waves-effect waves-light" type="button" id ="apagar"><span
+                                                    class="btn-label"><i class="far fa-lightbulb"></i></span>
+                                                Apagar</button> 
+
+                                            </row>
+
+                                            
+                                        </div>
+
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p>
+                                            <code id = "texto_led"></code>
+                                        </p>
+
+                                    </div>
+
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+     
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+
+    <!-- Firebase Init-->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+
+    <script>    
+        var firebaseConfig = {
+            apiKey: "AIzaSyB2RFHRB1zAGqJT9S_6Hvdwn9vga1ESbcM",
+            authDomain: "testweb-f3370.firebaseapp.com",
+            databaseURL: "https://testweb-f3370.firebaseio.com",
+            projectId: "testweb-f3370",
+            storageBucket: "testweb-f3370.appspot.com",
+            messagingSenderId: "287683280917",
+            appId: "1:287683280917:web:8e5c4e064c6ff504c08e1c",
+            measurementId: "G-MQH2PBN2JC"
+         };
+
+         // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="solicitudes_2.js"></script>
+    <script src= "control_leds.js"></script>
+    <script>
+        // Convert Base64 to Image
+        $(document).ready(function() {
+            $("#BaseToImage").click(function() {
+                //alert($("#response").val());
+                document.getElementById('preview').setAttribute('src', $("#response").val());
+                $("#preview").show();
+            });
+        });
+
+    </script>
+
+    <script>
+        // Convert Base64 to Image
+        $(document).ready(function() {
+            $("#BaseToImage2").click(function() {
+                //alert($("#response").val());
+                document.getElementById('preview2').setAttribute('src', $("#response2").val());
+                $("#preview2").show();
+            });
+        });
+
+    </script>
+
+    <script>
+        // Convert Base64 to Image
+        $(document).ready(function() {
+            $("#BaseToImage3").click(function() {
+                //alert($("#response").val());
+                document.getElementById('preview3').setAttribute('src', $("#response3").val());
+                $("#preview3").show();
+            });
+        });
+
+    </script>
+
+
+    <script>
+
+        $(document).ready(function() {
+            $("#available").click(function() {
+                'use strict';
+                const video = document.getElementById('video');
+                const canvas = document.getElementById('canvas');
+                const snap = document.getElementById('snap');
+                const errorMsgElement = document.getElementById('spanErrorMsg');
+                var front = false;
+                document.getElementById('flip-button').onclick = function() { front = !front; };
+                const constraints = {
+                    audio: true,
+                    video:{
+                        width: 500, height: 500, facingMode: (front? "user" : "environment")
+                    }
+
+                };
+
+                //access web cam
+                async function init(){
+                    try{
+                        const stream= await navigator.mediaDevices.getUserMedia(constraints);
+                        handleSuccess(stream);
+                    }
+
+                    catch(e){
+                        errorMsgElement.innerHTML = `navigator.getUserMedia.error:${e.toString()}`;
+                    }
+
+                }
+                
+                function handleSuccess(stream){
+                    window.stream = stream;
+                    video.srcObject = stream;
+                }
+
+                init(); //load init
+
+                //draw image
+                var context = canvas.getContext('2d');
+                snap.addEventListener("click", function(){
+                    context.drawImage(video, 0, 0, 500, 500);
+                })
+
+            });
+        });
+        
+    </script>    
+
+    <script>
+
+        $(document).ready(function() {
+            $("#off").click(function() {
+                'use strict';
+                const video = document.getElementById('video');
+                const canvas = document.getElementById('canvas');
+                const snap = document.getElementById('snap');
+                const errorMsgElement = document.getElementById('spanErrorMsg');
+                
+                const constraints = {
+                    audio: true,
+                    video:{
+                        width: 1280, height: 720
+                    }
+
+                };
+
+                stream.getTracks().forEach((track) => {
+                    track.stop();
+                    });
+
+                //no access web cam
+  
+                
+                function handleSuccess(stream){
+                    window.stream = stream;
+                    video.srcObject = stream;
+                }
+
+                init(); //load init
+
+
+            });
+        });
+        
+    </script>   
+
+
+    <script src="test.js"></script>
+    <script src = "imagenes.js"></script>
+    <style src = "estilo.css"></style>
+
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="../dist/js/feather.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+</body>
+
+</html>

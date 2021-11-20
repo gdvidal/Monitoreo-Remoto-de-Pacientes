@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="aa.png">
+    <title>Capstone Monitoreo Remoto</title>
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link href="../assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+<![endif]-->
+    <script src="extensions/editable/bootstrap-table-editable.js"></script> 
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" 
+            >
+            
+            <div class="col-lg-8 col-md-4 ">
+                <div class= "p3">
+                    <!-- Editable table -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Pacientes</h1>
+                            <h6 class="card-subtitle">Lista de pacientes registrados</h6>
+                        </div>
+                        <div id="table" class="table-editable" >
+                            <span class="table-add float-right mb-3 mr-5"><a href="#!" class="text-success"><i
+                                class="fas fa-user-plus" aria-hidden="true"></i></a></span>
+                            <table class="table table-striped table-dark mb-0">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th class="text-center">Nombre</th>
+                                <th class="text-center">Apellido</th>
+                                <th class="text-center">Correo</th>
+                                <th class="text-center">Documentación</th>
+                                <th class="text-center">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row" contenteditable="true">1</th>
+                                <td  class="text-center" contenteditable="true">Mark</td>
+                                <td   class="text-center" contenteditable="true">Trump</td>
+                                <td class="text-center" contenteditable="true">mtrump20@gmail.com</td>
+                                <td  class="text-center" >
+                                    <a href="aaaaaa.html" class="btn btn-secondary"><span
+                                        class="btn-label"><i class="fas fa-file-medical-alt"></i> Ver Monitoreo</span></a>
+                                </td>
+           
+                                <td  class="text-center">
+                                    <span class="table-remove"><button class="btn btn-rounded btn-secondary " type="button"  id="list_files"><span
+                                        class="btn-label"><i class="fas fa-trash-alt"></i></span>
+                                    </button></span>
+                                </td>
+                                </tr>
+                                <!-- This is our clonable table line -->
+                                <tr>
+                                <th scope="row" contenteditable="true">2</th>
+                                <td  class="text-center"contenteditable="true">Jacob</td>
+                                <td  class="text-center" contenteditable="true">Thornton</td>
+                                <td  class="text-center" contenteditable="true">jacobth@gmail.com</td>
+                                <td  class="text-center">
+                                    <a href="aaaaaa.html" class="btn btn-secondary"><span
+                                        class="btn-label"><i class="fas fa-file-medical-alt"></i> Ver Monitoreo</span></a>
+                                </td>
+       
+                                <td  class="text-center">
+                                    <span class="table-remove"><button class="btn btn-rounded btn-secondary " type="button"  id="list_files"><span
+                                        class="btn-label"><i class="fas fa-trash-alt"></i></span>
+                                    </button></span>
+                                </td>
+                                </tr>
+                                <!-- This is our clonable table line -->
+                                <tr>
+                                <th scope="row" contenteditable="true">3</th>
+                                <td  class="text-center" contenteditable="true">Elisa</td>
+                                <td  class="text-center" contenteditable="true">Gallagher</td>
+                                <td  class="text-center" contenteditable="true">egall@gmail.com</td>
+                                <td  class="text-center" >
+                                    <a href="aaaaaa.html" class="btn btn-secondary"><span
+                                        class="btn-label"><i class="fas fa-file-medical-alt"></i> Ver Monitoreo</span></a>
+                                </td>
+        
+                                <td  class="text-center">
+                                    <span class="table-remove"><button class="btn btn-rounded btn-secondary " type="button"  id="list_files"><span
+                                        class="btn-label"><i class="fas fa-trash-alt"></i></span>
+                                    </button></span>
+                                </td>
+                                </tr>
+                                <!-- This is our clonable table line -->
+                                <tr class="hide">
+                                <th scope="row" contenteditable="true">4</th>
+                                <td  class="text-center" contenteditable="true">Larry</td>
+                                <td  class="text-center" contenteditable="true">Biden</td>
+                                <td  class="text-center" contenteditable="true">lbiden@gmail.com</td>
+                                <td  class="text-center" >
+                                    <a href="aaaaaa.html" class="btn btn-secondary"><span
+                                        class="btn-label"><i class="fas fa-file-medical-alt"></i> Ver Monitoreo</span></a>
+                                </td>
+
+                                <td  class="text-center">
+                                    <span class="table-remove"><button class="btn btn-rounded btn-secondary " type="button"  id="list_files"><span
+                                        class="btn-label"><i class="fas fa-trash-alt"></i></span>
+                                    </button></span>
+                                </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="p3" >
+                        <a href="coronavirus.html" class="btn btn-secondary"><span
+                            class="btn-label"><i class="fas fa-notes-medical"></i></span> Información Coronavirus</a>
+                    </div>
+                    <!-- Editable table -->
+
+
+                    
+                </div>
+
+                <div class="p3" >
+                    <a href="authentication-login1.html" class="btn btn-secondary"><span
+                        class="btn-label"><i class="fas fa-sign-out-alt"></i></span></a>
+                </div>
+         
+            </div>
+ 
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- All Required js -->
+    <!-- ============================================================== -->
+
+    <script src= "table_editable.js"></script>
+    <script src="extensions/editable/bootstrap-table-editable.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="../dist/js/feather.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+
+    <script src="../assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../dist/js/pages/datatable/datatable-basic.init.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugin js -->
+    <!-- ============================================================== -->
+    <script>
+        $(".preloader ").fadeOut();
+    </script>
+</body>
+
+</html>
